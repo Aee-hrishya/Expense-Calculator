@@ -1,5 +1,4 @@
-import ExpenseItem from "./components/ExpenseItems";
-
+import Expenses from "./components/Expenses";
 
 function App() {
 
@@ -38,11 +37,9 @@ function App() {
     <div>
       <h2>Let's get started!</h2> {/* So small starting letter indicate that these are the basic html elements */}
 
-      {/* Below we accessed the different properties of the array of objects that we created*/}
-      <ExpenseItem title={expense[0].title} amount={expense[0].amount} date={expense[0].date}/> {/* Capital letters indicate that we ae using the custom made react components */}
-      <ExpenseItem title={expense[1].title} amount={expense[1].amount} date={expense[1].date}/>
-      <ExpenseItem title={expense[2].title} amount={expense[2].amount} date={expense[2].date}/>
-      <ExpenseItem title={expense[3].title} amount={expense[3].amount} date={expense[3].date}/>
+      {/* Below we have the expenses component which has other components inherited inside it*/}
+      <Expenses items={expense} />
+
     </div>
   );
 }
