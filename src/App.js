@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
 
@@ -35,13 +36,12 @@ const App = () => {
 
   return (
     <div>
-      <h2>Let's get started!</h2> {/* So small starting letter indicate that these are the basic html elements */}
-
+      <NewExpense />
       {/* Below we have the expenses component which has other components inherited inside it*/}
       <Expenses items={expense} />
 
     </div>
   );
-}
+};
 
 export default App;
