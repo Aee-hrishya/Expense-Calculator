@@ -4,7 +4,7 @@ import "./ExpenseItem.css"; //Importing the css file
 
 
 //Now we pass props here as parameter so that we can access the key value pairs inside it and make use of them
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
 
     return (
 

@@ -1,6 +1,6 @@
 import "./Card.css";
 
-function Card(props){
+const Card = (props) => {
 
     const classes = "card " + props.className; //Here we tweaked our classname a little bit as we wanted to also add the styling that the other components have so we concatenated it to our own class and made a custom class so that we can use it.
 
