@@ -8,7 +8,7 @@ import "./ExpenseItem.css"; //Importing the css file
 const ExpenseItem = (props) => {
 
     //We declared the useState here as it is a function and its very important that the useState always needs to be mentioned in the component function directly not outside it or inside a nested function
-    const [title, setTitle] = useState(props.title) //The useState always returns an array with 2 elements here the first element is the current state value and then setTitle which is the function that will be used to change the name
+    const [title, setTitle] = useState(props.title) //The useState always returns an array with 2 elements here the first element is the current state value and then setTitle which is the function that will be used to change the same
 
     //Below is the clickhandler function which is the function inside the onClick prop
     const clickHandler = () => {
