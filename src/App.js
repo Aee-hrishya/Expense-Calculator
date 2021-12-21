@@ -34,9 +34,16 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = expense => {
+
+    console.log(expense);
+    console.log("In App.js");
+
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       {/* Below we have the expenses component which has other components inherited inside it*/}
       <Expenses items={expense} />
 
