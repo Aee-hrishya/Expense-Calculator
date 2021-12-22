@@ -18,10 +18,16 @@ const Expenses = (props) => {
 
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-            <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} />
-            <ExpenseItem title={props.items[1].title} amount={props.items[1].amount} date={props.items[1].date} />
-            <ExpenseItem title={props.items[2].title} amount={props.items[2].amount} date={props.items[2].date} />
-            <ExpenseItem title={props.items[3].title} amount={props.items[3].amount} date={props.items[3].date} />
+            
+            {/*Below we dynamically added the items from the expense array, so that whenever we add something to the expense array it gets allocated automatically to the ExpenseItem component. We do this using the map method of the array and we do this so that we dont have to manually assign for every expense added on the web app */}
+            {props.items.map((expense) => {
+                return <ExpenseItem
+                    key={expense.id} /* We use the key(is a built in prop) prop to help react understand that each ExpenseItem is unique and has an ID so that it does not return bugs, we can use the key prop in any custom component or JSX element */
+                    title={expense.title}
+                    amount={expense.amount}
+                    date={expense.date}
+                />
+            })}
         </Card>
 
     );
